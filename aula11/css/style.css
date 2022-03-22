@@ -1,0 +1,48 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  width: 500px;
+  margin: 0 auto;
+  padding: 10px 0;
+  display: grid;
+}
+
+.formulario {
+  display: grid;
+  grid-template-columns: auto;
+}
+
+.elementos {
+  width: 300px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: auto;
+}
+
+.elemento-trim {
+  color: rgb(131, 25, 96);
+  font-size: large;
+  font-weight: bold;
+  background-color: rgb(240, 255, 255);
+}
+
+.elemento-uppercase {
+  color: rgb(255, 7, 7);
+  font-size: large;
+  font-weight: bold;
+  background-color: #ccc;
+}
+
+.elemento-lowercase {
+  color: rgb(12, 41, 135);
+  font-size: large;
+  font-weight: bold;
+  background-color: #ccc;
+}
+
+button {
+  margin: 10px 0;
+}
