@@ -55,8 +55,14 @@ form.addEventListener('submit', function (event) {
   //pegando os dados dos inputs nome e sobrenome e trabalhando o replace
   novoElemento.appendChild(divItem);
   const rep = document.createElement('p');
-  let re = /a/gi;
-  rep.innerHTML = nome.replace(re, '@');
+  const replace = document.createElement('p');
+  let substituir = '';
+  let characters = { 'a': '@', 'e': '3'};
+  substituir = nome.replace(/[a-e]/gi, m => characters[m]);
+  rep.innerHTML = substituir;
   divItem.appendChild(rep);
-
+  substituir = sobrenome.replace(/[a-e]/gi, m => characters[m]);
+  replace.innerHTML = substituir;
+  divItem.appendChild(replace);
+  
 });
