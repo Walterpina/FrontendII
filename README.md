@@ -18,3 +18,7 @@ Ajuste de código, refatoração e criação de Html com o uso do javascript
 * Conhecendo formulário;
 * Pegando os dados dos formulários;
 * Imprimindo os resultados na tela.
+
+## Aula 12
+
+Nesta aula tivemos de validar um novo formulário. As regras e detalhes estão na pasta da aula 12.
