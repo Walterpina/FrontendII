@@ -33,7 +33,6 @@ form:after {
   background: linear-gradient(var(--primary), var(--secondary));
 }
 
-
 input {
   width: 100%;
   padding: .4em .5em;
@@ -88,4 +87,19 @@ button {
   flex-direction: column;
   align-items: center;
   justify-content: center;
+}
+
+.messageError {
+  border: 1px solid #c90000;
+}
+
+.error {
+  margin-top: 10px;
+  color: #c90000;
+  font-size: 12px;
+}
+
+.errorList {
+  margin: 5px 0;
+  list-style-type: none;
 }

@@ -10,9 +10,7 @@
   <!-- ---------------- estilos compartilhados entre login e signup ---------------- -->
   <link rel="stylesheet" href="styles/acesso.css">
 
-  <!-- ---------------------- lógica aplicada no registro -------------------- -->
-  <script src="/scripts/utils.js"></script>
-  <script src="/scripts/signup.js"></script>
+  
 
 </head>
 
@@ -22,33 +20,37 @@
     <img src="./assets/pessoa-signup.png" alt="">
   </div>
   <div class="right">
-    <form>
+    <form >
       <div class="form-header">
         <p>To-Do App</p>
       </div>
 
       <label>
-        Nome:
-        <input type="text" name="name" id="name">
+        Nome<span style="color: #c90000" id="messageName">*</span>:
+        <input type="text" name="name" id="name" maxlength="100" >
       </label>
       <label>
-        Apelido:
-        <input type="text" name="nickname" id="nickname">
+        Apelido<span style="color: #c90000">*</span>:
+        <input type="text" name="nickname" id="nickname" maxlength="100" >
       </label>
       <label>
-        Email:
-        <input type="text" name="email" id="email">
+        Email<span style="color: #c90000">*</span>:
+        <input type="email" name="email" id="email" >
       </label>
       <label>
         Senha:
-        <input type="password" name="password" id="password">
+        <input type="password" name="password" maxlength="20" id="password">
       </label>
       <label>
         Repetir senha:
-        <input type="password" name="repeatpass" id="repeatpass">
+        <input type="password" name="repeatPassword" maxlength="20" id="repeatPassword">
       </label>
 
       <button type="submit" id="btn-submit">Criar conta</button>
+
+      <section class="error">
+        <ul></ul>
+      </section>
 
     </form>
     <div class="ingressar">
@@ -56,7 +58,9 @@
     </div>
   </div>
 
-  <script src="./scripts/signup.js"></script>
+ <!-- ---------------------- lógica aplicada no registro -------------------- -->
+ <script src="/scripts/utils.js"></script>
+ <script src="/scripts/signup.js"></script>
 
 </body>
 
