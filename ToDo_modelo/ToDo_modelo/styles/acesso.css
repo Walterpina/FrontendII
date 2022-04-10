@@ -63,6 +63,15 @@ button {
   font-size: 1em;
 }
 
+button:disabled {
+  padding: .5em 3em;
+  background-color: var(--disabled);
+  color: white;
+  margin-top: 2em;
+  font-weight: 400;
+  font-size: 1em;
+}
+
 .form-header {
   color: grey;
   font-size: 2em;
@@ -96,7 +105,6 @@ button {
 .error {
   margin-top: 10px;
   color: #c90000;
-  font-size: 12px;
 }
 
 .errorList {
