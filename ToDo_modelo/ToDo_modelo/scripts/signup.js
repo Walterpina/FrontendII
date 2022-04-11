@@ -120,10 +120,10 @@ btnSubmit.addEventListener('click', function(e) {
     // lendo os dados recebidos
     if(typeof data === 'object') {
       alert('Cadastro realizado com sucesso');
+      sessionStorage.setItem("jwt", data.jwt);
     } else {
       alert(data);
     }
-    sessionStorage.setItem("jwt", data.jwt);
   })
   .catch(function(err) {
     alert(err);

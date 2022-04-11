@@ -99,15 +99,10 @@ button:disabled {
 }
 
 .messageError {
-  border: 1px solid #c90000;
+  border: 1px solid var(--error);
 }
 
 .error {
   margin-top: 10px;
-  color: #c90000;
-}
-
-.errorList {
-  margin: 5px 0;
-  list-style-type: none;
+  color: var(--error);
 }
