@@ -18,6 +18,16 @@
 </head>
 
 <body>
+
+  <!-- Spinner Html -->
+  <div class="spinner-loading">
+    <div class="fulfilling-bouncing-circle-spinner">
+      <div class="circle"></div>
+      <div class="orbit"></div>
+    </div>
+  </div>
+  <!-- Spinner Html -->
+
   <header>
     <nav>
       <a href="#">Tarefas</a>
@@ -31,7 +41,7 @@
     </div>
   </header>
 
-
+  <!-- Formulário de inclusão de novas tarefas -->
   <form class="nova-tarefa">
     <div class="not-done"></div>
     <input id="novaTarefa" type="text" placeholder="Nova tarefa">
@@ -40,36 +50,36 @@
     </button>
   </form>
 
-
   <ul class="tarefas-pendentes">
 
-    <!-- HTML que vem do js -->
+    <!-- Inclusão das tarefas criadas -->
     <div class="create-tasks"></div>
 
+    <!-- eskeleto das tarefas - loading da página -->
     <div id="incluir">
-    <!-- <div id="skeleton"> -->
-      <li class="tarefa">
-        <div class="not-done"></div>
-        <div class="descricao">
-          <p class="nome">Nova tarefa</p>
-          <p class="timestamp">Criada em: 15/07/21</p>
-        </div>
-      </li>
-      <li class="tarefa">
-        <div class="not-done"></div>
-        <div class="descricao">
-          <p class="nome">Nova tarefa</p>
-          <p class="timestamp">Criada em: 15/07/21</p>
-        </div>
-      </li>
-      <li class="tarefa">
-        <div class="not-done"></div>
-        <div class="descricao">
-          <p class="nome">Nova tarefa</p>
-          <p class="timestamp">Criada em: 15/07/21</p>
-        </div>
-      </li>
-
+      <div id="skeleton">
+        <li class="tarefa">
+          <div class="not-done"></div>
+          <div class="descricao">
+            <p class="nome">Nova tarefa</p>
+            <p class="timestamp">Criada em: 15/07/21</p>
+          </div>
+        </li>
+        <li class="tarefa">
+          <div class="not-done"></div>
+          <div class="descricao">
+            <p class="nome">Nova tarefa</p>
+            <p class="timestamp">Criada em: 15/07/21</p>
+          </div>
+        </li>
+        <li class="tarefa">
+          <div class="not-done"></div>
+          <div class="descricao">
+            <p class="nome">Nova tarefa</p>
+            <p class="timestamp">Criada em: 15/07/21</p>
+          </div>
+        </li>
+      </div>
     </div>
   </ul>
 
@@ -77,7 +87,6 @@
   <ul class="tarefas-terminadas">
 
   </ul>
-
 
   <!-- ----------------------------- sweet alert ----------------------------- -->
   <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>

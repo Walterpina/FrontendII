@@ -81,6 +81,8 @@ btnAccess.addEventListener('click', function(e) {
       sessionStorage.setItem("jwt", data.jwt);
       //rota de direcionamento para tarefas
       window.location.href = 'tarefas.html';
+    } else if (typeof data === 'string'){
+      alert(data);
     } else {
       hideSpinner();
     }
