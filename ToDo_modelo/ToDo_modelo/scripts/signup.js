@@ -1,23 +1,24 @@
 // constantes e variáveis globais
+// console.log(window.apiApplication);
 
 //formulário
 const form = document.querySelector('form');
-const namePerson = document.getElementById('name');
-const nickPerson = document.getElementById('nickname');
-const emailPerson = document.getElementById('email');
-const password = document.getElementById('password');
-const repeatPassword = document.getElementById('repeatPassword');
+const namePerson = window.getValue('name');
+const nickPerson = window.getValue('nickname');
+const emailPerson = window.getValue('email');
+const password = window.getValue('password');
+const repeatPassword = window.getValue('repeatPassword');
 // mensagem
-const messageName = document.getElementById('messageName');
-const messageNick = document.getElementById('messageNick');
-const messageEmail = document.getElementById('messageEmail');
+const messageName = window.getValue('messageName');
+const messageNick = window.getValue('messageNick');
+const messageEmail = window.getValue('messageEmail');
 // Botão
-const btnSubmit = document.getElementById('btn-submit');
+const btnSubmit = window.getValue('btn-submit');
 //mensagens
-const smallName = document.getElementById('smallName');
-const smallNickname = document.getElementById('smallNickname');
-const smallEmail = document.getElementById('smallEmail');
-const smallPassword = document.getElementById('smallPassword');
+const smallName = window.getValue('smallName');
+const smallNickname = window.getValue('smallNickname');
+const smallEmail = window.getValue('smallEmail');
+const smallPassword = window.getValue('smallPassword');
 
 // funções e validações
 
@@ -106,7 +107,7 @@ btnSubmit.addEventListener('click', function(e) {
   };
 
   // criando a comunicação com a API
-  fetch('https://ctd-todo-api.herokuapp.com/v1/users', {
+  fetch(window.apiApplication + 'users', {
     method: 'POST',
     headers: {
       'Content-Type': 'application/json'
@@ -121,6 +122,7 @@ btnSubmit.addEventListener('click', function(e) {
     if(typeof data === 'object') {
       alert('Cadastro realizado com sucesso');
       sessionStorage.setItem("jwt", data.jwt);
+      window.location.href = 'index.html';
     } else {
       alert(data);
     }

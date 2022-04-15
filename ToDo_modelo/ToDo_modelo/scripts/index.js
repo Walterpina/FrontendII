@@ -1,12 +1,22 @@
 // Constantes e variáveis
 const form = document.querySelector('form');
-const email = document.getElementById("inputEmail");
-const password = document.getElementById("inputPassword");
-const smallEmail = document.getElementById("messageEmail");
-const smallPassword = document.getElementById("messagePassword");
-const btnAccess = document.getElementById("btnAccess");
+const email = window.getValue("inputEmail");
+const password = window.getValue("inputPassword");
+const smallEmail = window.getValue("messageEmail");
+const smallPassword = window.getValue("messagePassword");
+const btnAccess = window.getValue("btnAccess");
+
+const spinner = document.querySelector('.spinner-loading');
 
 // Funções e validações 
+
+const showSpinner = () => {
+  return spinner.classList.add("show");
+};
+
+const hideSpinner = () => {
+  spinner.classList.remove("show");
+}
 
 // validando email
 email.addEventListener('keyup', function() {
@@ -44,13 +54,18 @@ form.addEventListener('keyup', function() {
 btnAccess.addEventListener('click', function(e) {
   e.preventDefault();
   //criando objeto para comunicação com a API
+
+  //exibe spinner
+  showSpinner();
+
+  // objeto json
   const formLogin = {
     email: email.value,
     password: password.value
   };
 
   //Criando a comunicação com a API
-  fetch('https://ctd-todo-api.herokuapp.com/v1/users/login', {
+  fetch(window.apiApplication + 'users/login', {
     method: 'POST',
     headers: {
       'Content-Type': 'application/json'
@@ -61,11 +76,13 @@ btnAccess.addEventListener('click', function(e) {
     return resp.json();
   })
   .then(function(data) {
-    console.log(data);
-    localStorage.setItem("jwt", data.jwt);
-    window.location.href = 'tarefas.html';
-  })
-  .catch(function(err) {
-    console.log(err);
+    if(typeof data === 'object') {
+      //guardo o token no ssessionStorage
+      sessionStorage.setItem("jwt", data.jwt);
+      //rota de direcionamento para tarefas
+      window.location.href = 'tarefas.html';
+    } else {
+      hideSpinner();
+    }
   });
 });
