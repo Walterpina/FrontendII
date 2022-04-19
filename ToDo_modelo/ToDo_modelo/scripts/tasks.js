@@ -153,6 +153,8 @@ form.addEventListener('submit', function (e) {
     const pTimestamp = document.createElement("p");
     pTimestamp.classList.add("timestamp");
     pTimestamp.innerHTML = `Criada em: ${data.createAt}`;
+
+    window.location.reload();
   });
 });
 

@@ -105,7 +105,7 @@ btnSubmit.addEventListener('click', function(e) {
     email: emailPerson.value,
     password: password.value,
   };
-
+  showSpinner();
   // criando a comunicação com a API
   fetch(window.apiApplication + 'users', {
     method: 'POST',
@@ -125,6 +125,7 @@ btnSubmit.addEventListener('click', function(e) {
       window.location.href = 'index.html';
     } else {
       alert(data);
+      hideSpinner();
     }
   })
   .catch(function(err) {

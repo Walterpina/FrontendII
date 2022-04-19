@@ -83,6 +83,7 @@ btnAccess.addEventListener('click', function(e) {
       window.location.href = 'tarefas.html';
     } else if (typeof data === 'string'){
       alert(data);
+      hideSpinner();
     } else {
       hideSpinner();
     }
