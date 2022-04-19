@@ -1,11 +1,11 @@
 @import url('https://fonts.googleapis.com/css2?family=Lato:wght@100;300;400&display=swap');
 
 :root {
-  --primary: #7898FF;
-  --secondary: #8E64C5;
-  --app-grey: #F2F2F2;
-  --disabled: #b4c0e9;
-  --error: #c90000;
+  --primary: #FF9D26;
+  --secondary: #FFF91C;
+  --app-grey: #EEE0B3;
+  --disabled: #EB9C82;
+  --error: #FF193F;
 }
 
 * {
@@ -60,18 +60,18 @@ button {
   top: 0;
   left: 0;
   border-radius: 50%;
-  border: calc(60px * 0.03) solid #97affd;
+  border: calc(60px * 0.03) solid #E84C17;
   animation: fulfilling-bouncing-circle-spinner-orbit-animation infinite 4000ms ease;
 }
 
 .fulfilling-bouncing-circle-spinner .circle {
   height: 60px;
   width: 60px;
-  color: #b0c3ff;
+  color: #EB9C82;
   display: block;
   border-radius: 50%;
   position: relative;
-  border: calc(60px * 0.1) solid #b0c3ff;
+  border: calc(60px * 0.1) solid #EB9C82;
   animation: fulfilling-bouncing-circle-spinner-circle-animation infinite 4000ms ease;
   transform: rotate(0deg) scale(1);
 }

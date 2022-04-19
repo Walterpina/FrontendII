@@ -51,12 +51,8 @@
   </form>
 
   <ul class="tarefas-pendentes">
-
-    <!-- Inclusão das tarefas criadas -->
-    <div class="create-tasks"></div>
-
     <!-- eskeleto das tarefas - loading da página -->
-    <div id="incluir">
+    <div id="esconder">
       <div id="skeleton">
         <li class="tarefa">
           <div class="not-done"></div>
@@ -81,6 +77,9 @@
         </li>
       </div>
     </div>
+
+    <!-- Inclusão das tarefas criadas -->
+    <div class="create-tasks"></div>
   </ul>
 
   <h2 class="titulo-terminadas">Tarefas terminadas</h2>
@@ -95,7 +94,7 @@
   <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
   <!-- Scripts -->
   <script src="scripts/utils.js"></script>
-  <script src="scripts/tarefas.js" defer></script>
+  <script src="scripts/tasks.js" defer></script>
 </body>
 
 </html>

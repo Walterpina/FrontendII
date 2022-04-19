@@ -36,7 +36,7 @@ const hideSpinner = () => {
 // Criar função get de novas tarefas
 const getNewTasks = function (elem) {
 
-  fetch('https://ctd-todo-api.herokuapp.com/v1/tasks', {
+  fetch(window.apiApplication + 'tasks', {
     method: 'GET',
     headers: {
       'Content-Type': 'application/json',
@@ -103,8 +103,8 @@ const getNewTasks = function (elem) {
       pTimestamp.innerText = "Criada em: " + date(elem.createdAt);
       divDescription.appendChild(pTimestamp);
     });
-    //oculta o eskeleton
-    const incluir = document.getElementById("incluir");
+    // oculta o eskeleton
+    const incluir = document.getElementById("esconder");
     incluir.classList.add("tasks");
   });
 };
@@ -157,10 +157,14 @@ form.addEventListener('submit', function (e) {
 });
 
 closeApp.onclick = function() {
+  // loading
   showSpinner();
   setTimeout(() => {
+    // removo o jwt da sessão
     sessionStorage.removeItem('jwt', codeJwt);
+    // direciono para a tela de login
     window.location.href = "index.html";
+    // retiro o loading
     hideSpinner();
   }, 3000);
 };
